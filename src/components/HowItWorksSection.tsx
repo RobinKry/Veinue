@@ -7,8 +7,8 @@ const steps = [
   { num: '02', title: 'Decide easily', desc: 'Find the best Venues and Deals nearby' },
   { num: '03', title: 'Stay connected', desc: 'No need for constant texting — communicate easier and better' },
   { num: '04', title: 'Thrive', desc: 'With your friends — and our safety features as your backup' },
-  { num: '04.5', title: 'Change Location?', desc: 'Top recommendations & Deals with a Nearby filter. One click to let friends know and share the way' },
-  { num: '05', title: 'Safe way home', desc: 'Let your friends walk you home digitally' },
+  { num: '05', title: 'Change Location?', desc: 'Top recommendations & Deals with a Nearby filter. One click to let friends know and share the way' },
+  { num: '06', title: 'Safe way home', desc: 'Let your friends walk you home digitally' },
 ];
 
 const HowItWorksSection = () => (
