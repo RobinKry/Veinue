@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 0%;
+    --foreground: 34 33% 92%;
+
+    --card: 240 8% 5%;
+    --card-foreground: 34 33% 92%;
+
+    --popover: 0 0% 3%;
+    --popover-foreground: 34 33% 92%;
+
+    --primary: 36 90% 55%;
+    --primary-foreground: 0 0% 3%;
+
+    --secondary: 34 33% 92%;
+    --secondary-foreground: 0 0% 3%;
+
+    --muted: 240 8% 5%;
+    --muted-foreground: 34 33% 55%;
+
+    --accent: 25 68% 57%;
+    --accent-foreground: 0 0% 3%;
+
+    --destructive: 350 50% 50%;
+    --destructive-foreground: 34 33% 92%;
+
+    --border: 34 33% 12%;
+    --input: 34 33% 12%;
+    --ring: 36 90% 55%;
+
+    --radius: 0.125rem;
+
+    /* Custom Veinue tokens */
+    --warm-glow: 36 90% 55%;
+    --amber: 25 80% 57%;
+    --rose: 350 40% 46%;
+    --cold-blue: 222 60% 52%;
+    --cream: 34 33% 92%;
+    --deep: 0 0% 0%;
+    --dim: 34 33% 25%;
+
+    --font-display: 'Syne', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+
+    --sidebar-background: 0 0% 3%;
+    --sidebar-foreground: 34 33% 92%;
+    --sidebar-primary: 36 90% 55%;
+    --sidebar-primary-foreground: 0 0% 3%;
+    --sidebar-accent: 240 8% 5%;
+    --sidebar-accent-foreground: 34 33% 92%;
+    --sidebar-border: 34 33% 12%;
+    --sidebar-ring: 36 90% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+    font-weight: 300;
+    overflow-x: hidden;
+  }
+
+  /* Noise overlay */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+    opacity: 0.028;
+    pointer-events: none;
+    z-index: 1000;
+  }
+}
+
+/* Scroll reveal base */
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+  .text-warm-glow {
+    color: hsl(var(--warm-glow));
+  }
+  .text-cream {
+    color: hsl(var(--cream));
+  }
+  .text-dim {
+    color: hsl(var(--dim));
+  }
+  .text-muted-custom {
+    color: hsl(var(--cream) / 0.55);
+  }
+  .bg-deep {
+    background-color: hsl(var(--deep));
+  }
+}
+
+/* Keyframes */
+@keyframes skyPulse {
+  0% { opacity: 1; }
+  100% { opacity: 0.85; filter: hue-rotate(8deg); }
+}
+
+@keyframes bokehDrift {
+  0% { transform: translateY(0) scale(1); }
+  100% { transform: translateY(var(--drift)) scale(var(--scale)); }
+}
+
+@keyframes scrollLine {
+  0% { transform: scaleY(0); transform-origin: top; opacity: 1; }
+  50% { transform: scaleY(1); transform-origin: top; opacity: 1; }
+  51% { transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; opacity: 0; }
+}
+
+@keyframes fadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
