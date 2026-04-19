@@ -3,11 +3,11 @@ import ImageBackground from './ImageBackground';
 import bgHowitworks from '@/assets/bg-howitworks.jpg';
 
 const steps = [
-  { num: '01', title: 'Group up', desc: 'Via Link, Quick Add or Vein' },
-  { num: '02', title: 'Decide easily', desc: 'Find the best Venues and Deals nearby' },
-  { num: '03', title: 'Stay connected', desc: 'No need for constant texting — communicate easier and better' },
+  { num: '01', title: 'Group up', desc: 'Via Link or Quick Add' },
+  { num: '02', title: 'Decide easily', desc: 'Find the best Venues and Deals' },
+  { num: '03', title: 'Stay connected', desc: 'No constant texting — communicate easier and better' },
   { num: '04', title: 'Thrive', desc: 'With your friends — and our safety features as your backup' },
-  { num: '05', title: 'Change Location?', desc: 'Top recommendations & Deals with a Nearby filter. One click to let friends know and share the way' },
+  { num: '05', title: 'Change Location?', desc: 'Top recommendations with a Nearby filter' },
   { num: '06', title: 'Safe way home', desc: 'Let your friends walk you home digitally' },
 ];
 
@@ -35,7 +35,7 @@ const HowItWorksSection = () => (
               <div className="font-display text-[3.5rem] font-extrabold leading-none mb-6 tracking-tight" style={{ color: 'rgba(245,166,35,0.12)' }}>
                 {step.num}
               </div>
-              <h4 className="font-display text-base font-bold mb-3 tracking-[0.01em]">{step.title}</h4>
+              <h4 className="font-display text-sm font-bold mb-3 tracking-[0.01em]">{step.title}</h4>
               <p className="text-[0.85rem] leading-[1.75] text-muted-custom">{step.desc}</p>
               {i < steps.length - 1 && (
                 <div className="absolute top-[60px] right-[-1px] w-0.5 h-0.5 bg-primary hidden md:block" style={{ boxShadow: '0 0 8px hsl(36,90%,55%)' }} />
