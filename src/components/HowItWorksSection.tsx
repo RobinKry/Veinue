@@ -1,6 +1,4 @@
 import RevealOnScroll from './RevealOnScroll';
-import ImageBackground from './ImageBackground';
-import bgHowitworks from '@/assets/bg-howitworks.jpg';
 
 const steps = [
   { num: '01', title: 'Group up', desc: 'Via Link or Quick Add' },
@@ -13,7 +11,7 @@ const steps = [
 
 const HowItWorksSection = () => (
   <section className="relative py-16 md:py-24 px-6 md:px-12 overflow-hidden bg-deep" id="how">
-    <ImageBackground src={bgHowitworks} alt="" opacity={0.32} />
+    
     <div className="absolute inset-0 bg-gradient-to-b from-deep via-deep/90 to-deep pointer-events-none" />
 
     <div className="relative z-10 max-w-[1100px] mx-auto">
