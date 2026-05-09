@@ -1,6 +1,4 @@
 import RevealOnScroll from './RevealOnScroll';
-import ImageBackground from './ImageBackground';
-import bgPillars from '@/assets/bg-pillars.jpg';
 
 const pillars = [
   {
@@ -46,7 +44,7 @@ const pillars = [
 
 const PillarsSection = () => (
   <section className="relative py-16 md:py-24 px-6 md:px-12 overflow-hidden bg-background">
-    <ImageBackground src={bgPillars} alt="" opacity={0.32} />
+    
     <div className="absolute inset-0 bg-gradient-to-b from-background via-background/85 to-background pointer-events-none" />
 
     <div className="relative z-10">
