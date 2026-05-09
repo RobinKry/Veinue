@@ -1,10 +1,8 @@
 import RevealOnScroll from './RevealOnScroll';
-import ImageBackground from './ImageBackground';
-import bgManifesto from '@/assets/bg-manifesto.jpg';
 
 const ManifestoSection = () => (
   <section className="relative py-16 md:py-24 px-6 md:px-12 overflow-hidden bg-deep" id="about">
-    <ImageBackground src={bgManifesto} alt="" opacity={0.35} />
+    
     <div className="absolute inset-0 bg-gradient-to-b from-deep via-deep/90 to-deep pointer-events-none" />
 
     <div className="relative z-10 max-w-[1100px] mx-auto grid grid-cols-1 md:grid-cols-[1fr_1.4fr] gap-10 md:gap-20 items-center">
