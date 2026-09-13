@@ -29,8 +29,8 @@ const CTASection = () => {
           </RevealOnScroll>
           <RevealOnScroll delay={0.1}>
             <h2 className="font-display text-[clamp(2.5rem,6vw,5rem)] font-extrabold tracking-tighter leading-none mb-6">
-              Launch<br />
-              <span className="text-primary" style={{ textShadow: '0 0 40px rgba(245,166,35,0.4)' }}>2026.</span>
+              Find your<br />
+              <span className="text-primary" style={{ textShadow: '0 0 40px rgba(245,166,35,0.4)' }}>people.</span>
             </h2>
           </RevealOnScroll>
           <RevealOnScroll delay={0.3}>

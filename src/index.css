@@ -125,3 +125,18 @@
 @keyframes fadeUp {
   to { opacity: 1; transform: translateY(0); }
 }
+
+@keyframes ringPulse {
+  0%, 100% { opacity: 0.28; }
+  50% { opacity: 0.9; }
+}
+
+@keyframes gridDrift {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 56px; }
+}
+
+@keyframes beamSlide {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}

@@ -4,16 +4,17 @@ const VeinueFooter = () => (
       <div className="font-display text-[1.1rem] font-extrabold tracking-[0.1em] uppercase">
         Ve<span className="text-primary">i</span>nue
       </div>
-      <div className="mt-1.5 text-[0.8rem] text-dim tracking-[0.05em]">
-        Ve<span className="text-primary">i</span>nue the Urban Pulse · Berlin 2026
-      </div>
-      <div className="mt-3 text-[0.72rem] leading-[1.6] max-w-[520px]" style={{ color: 'hsl(34 33% 92% / 0.38)' }}>
-        Visuals generated in-browser via Canvas &amp; SVG — no external images.
-      </div>
+      <div className="mt-1.5 text-[0.8rem] text-dim tracking-[0.05em]">Find your people. · Berlin 2026</div>
     </div>
-    <nav>
-      <a href="#about" className="font-display text-[0.65rem] tracking-[0.2em] uppercase text-dim no-underline hover:text-foreground transition-colors">
-        Project
+    <nav className="flex gap-6">
+      <a href="#product" className="font-display text-[0.65rem] tracking-[0.2em] uppercase text-dim no-underline hover:text-foreground transition-colors">
+        Case
+      </a>
+      <a href="#how" className="font-display text-[0.65rem] tracking-[0.2em] uppercase text-dim no-underline hover:text-foreground transition-colors">
+        How
+      </a>
+      <a href="#contact" className="font-display text-[0.65rem] tracking-[0.2em] uppercase text-dim no-underline hover:text-foreground transition-colors">
+        Contact
       </a>
     </nav>
   </footer>
