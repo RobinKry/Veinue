@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,137 +6,93 @@
 
 @layer base {
   :root {
-    --background: 0 0% 0%;
-    --foreground: 34 33% 92%;
-
-    --card: 240 8% 5%;
-    --card-foreground: 34 33% 92%;
-
-    --popover: 0 0% 3%;
-    --popover-foreground: 34 33% 92%;
-
-    --primary: 36 90% 55%;
-    --primary-foreground: 0 0% 3%;
-
-    --secondary: 34 33% 92%;
-    --secondary-foreground: 0 0% 3%;
-
-    --muted: 240 8% 5%;
-    --muted-foreground: 34 33% 55%;
-
-    --accent: 25 68% 57%;
-    --accent-foreground: 0 0% 3%;
-
-    --destructive: 350 50% 50%;
-    --destructive-foreground: 34 33% 92%;
-
-    --border: 34 33% 12%;
-    --input: 34 33% 12%;
-    --ring: 36 90% 55%;
-
-    --radius: 0.125rem;
-
-    /* Custom Veinue tokens */
-    --warm-glow: 36 90% 55%;
-    --amber: 25 80% 57%;
-    --rose: 350 40% 46%;
-    --cold-blue: 222 60% 52%;
-    --cream: 34 33% 92%;
-    --deep: 0 0% 0%;
-    --dim: 34 33% 25%;
-
-    --font-display: 'Syne', sans-serif;
-    --font-body: 'DM Sans', sans-serif;
-
-    --sidebar-background: 0 0% 3%;
-    --sidebar-foreground: 34 33% 92%;
-    --sidebar-primary: 36 90% 55%;
-    --sidebar-primary-foreground: 0 0% 3%;
-    --sidebar-accent: 240 8% 5%;
-    --sidebar-accent-foreground: 34 33% 92%;
-    --sidebar-border: 34 33% 12%;
-    --sidebar-ring: 36 90% 55%;
+    --background: 0 0% 5%;
+    --foreground: 36 24% 92%;
+    --card: 0 0% 5%;
+    --card-foreground: 36 24% 92%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 36 24% 92%;
+    --primary: 36 24% 92%;
+    --primary-foreground: 0 0% 5%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 36 24% 92%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 36 8% 52%;
+    --accent: 0 0% 10%;
+    --accent-foreground: 36 24% 92%;
+    --destructive: 0 62% 40%;
+    --destructive-foreground: 36 24% 92%;
+    --border: 0 0% 17%;
+    --input: 0 0% 17%;
+    --ring: 36 24% 92%;
+    --radius: 0px;
+    --page: #0c0c0c;
+    --ink: #f2ede4;
+    --mute: #8c877e;
+    --hair: #2c2c2c;
+    --font-display: 'Familjen Grotesk', ui-sans-serif, system-ui, sans-serif;
+    --font-body: 'Newsreader', ui-serif, Georgia, serif;
+    --sidebar-background: 0 0% 5%;
+    --sidebar-foreground: 36 24% 92%;
+    --sidebar-primary: 36 24% 92%;
+    --sidebar-primary-foreground: 0 0% 5%;
+    --sidebar-accent: 0 0% 10%;
+    --sidebar-accent-foreground: 36 24% 92%;
+    --sidebar-border: 0 0% 17%;
+    --sidebar-ring: 36 24% 92%;
   }
-}
 
-@layer base {
   * {
     @apply border-border;
   }
+
+  html {
+    background: var(--page);
+    scrollbar-width: thin;
+    scrollbar-color: #2c2c2c #0c0c0c;
+  }
+
   body {
-    @apply bg-background text-foreground;
+    background: var(--page);
+    color: var(--ink);
     font-family: var(--font-body);
-    font-weight: 300;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
     overflow-x: hidden;
   }
 
-  /* Noise overlay */
-  body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
-    opacity: 0.028;
-    pointer-events: none;
-    z-index: 1000;
+  :focus-visible {
+    outline: 2px solid var(--ink);
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation: none !important;
+      transition: none !important;
+    }
   }
 }
 
-/* Scroll reveal base */
 @layer utilities {
   .font-display {
     font-family: var(--font-display);
   }
-  .text-warm-glow {
-    color: hsl(var(--warm-glow));
+  .font-body {
+    font-family: var(--font-body);
   }
-  .text-cream {
-    color: hsl(var(--cream));
+  .text-ink {
+    color: var(--ink);
   }
-  .text-dim {
-    color: hsl(var(--dim));
+  .text-mute {
+    color: var(--mute);
   }
-  .text-muted-custom {
-    color: hsl(var(--cream) / 0.55);
+  .bg-page {
+    background-color: var(--page);
   }
-  .bg-deep {
-    background-color: hsl(var(--deep));
+  .rule {
+    border-color: var(--hair);
   }
-}
-
-/* Keyframes */
-@keyframes skyPulse {
-  0% { opacity: 1; }
-  100% { opacity: 0.85; filter: hue-rotate(8deg); }
-}
-
-@keyframes bokehDrift {
-  0% { transform: translateY(0) scale(1); }
-  100% { transform: translateY(var(--drift)) scale(var(--scale)); }
-}
-
-@keyframes scrollLine {
-  0% { transform: scaleY(0); transform-origin: top; opacity: 1; }
-  50% { transform: scaleY(1); transform-origin: top; opacity: 1; }
-  51% { transform-origin: bottom; }
-  100% { transform: scaleY(0); transform-origin: bottom; opacity: 0; }
-}
-
-@keyframes fadeUp {
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes ringPulse {
-  0%, 100% { opacity: 0.28; }
-  50% { opacity: 0.9; }
-}
-
-@keyframes gridDrift {
-  0% { background-position: 0 0; }
-  100% { background-position: 0 56px; }
-}
-
-@keyframes beamSlide {
-  0% { background-position: 200% 0; }
-  100% { background-position: -200% 0; }
 }

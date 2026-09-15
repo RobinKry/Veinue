@@ -1,46 +1,33 @@
-import RevealOnScroll from './RevealOnScroll';
-
 const steps = [
-  { num: '01', title: 'Walk in', desc: 'You are a presence. Not a pin. Not a post.' },
-  { num: '02', title: 'Friends', desc: 'See who you already know in the room.' },
-  { num: '03', title: 'Community', desc: 'See who else from Veinue is here.' },
-  { num: '04', title: 'Connect', desc: 'No text on the request. They choose.' },
-  { num: '05', title: 'Find', desc: 'Lost a friend? Pulse toward them — friends only.' },
-  { num: '06', title: 'Ghost', desc: 'Everyone, friends only, or nobody. From the home screen.' },
+  { title: 'Walk in', desc: 'You are a presence. Not a pin. Not a post.' },
+  { title: 'Friends', desc: 'See who you already know in the room.' },
+  { title: 'Community', desc: 'See who else from Veinue is here.' },
+  { title: 'Connect', desc: 'No text on the request. They choose.' },
+  { title: 'Find', desc: 'Lost a friend? Pulse toward them. Friends only.' },
+  { title: 'Ghost', desc: 'Everyone, friends only, or nobody. From home.' },
 ];
 
 const HowItWorksSection = () => (
-  <section className="relative py-16 md:py-24 px-6 md:px-12 overflow-hidden bg-deep" id="how">
-    <div className="relative z-10 max-w-[1100px] mx-auto">
-      <RevealOnScroll>
-        <div className="font-display text-[0.65rem] font-bold tracking-[0.3em] uppercase text-primary mb-5">
-          How it works
-        </div>
-      </RevealOnScroll>
-      <RevealOnScroll delay={0.08}>
-        <h2 className="font-display text-[clamp(2rem,4vw,3rem)] font-extrabold tracking-tight mb-12 max-w-[640px] leading-[1.1]">
-          You show up.
-          <br />
-          They are already there.
-        </h2>
-      </RevealOnScroll>
-
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-px">
-        {steps.map((step) => (
-          <RevealOnScroll key={step.num} className="flex">
-            <div className="bg-black p-8 md:p-9 relative flex-1">
-              <div
-                className="font-display text-[3.2rem] font-extrabold leading-none mb-6 tracking-tight"
-                style={{ color: 'rgba(245,166,35,0.12)' }}
-              >
-                {step.num}
-              </div>
-              <h4 className="font-display text-sm font-bold mb-3">{step.title}</h4>
-              <p className="text-[0.85rem] leading-[1.75] text-muted-custom">{step.desc}</p>
-            </div>
-          </RevealOnScroll>
+  <section id="how" className="px-5 py-28 md:px-12 md:py-36 border-t rule">
+    <div className="max-w-[980px]">
+      <h2 className="font-display font-semibold tracking-[-0.03em] leading-[1.05] text-[clamp(2.2rem,5vw,4.25rem)] text-ink m-0 mb-16">
+        You show up.
+      </h2>
+      <ol className="list-none m-0 p-0">
+        {steps.map((step, i) => (
+          <li key={step.title} className="grid grid-cols-[48px_1fr] md:grid-cols-[80px_200px_1fr] gap-4 md:gap-10 py-6 border-t rule">
+            <span className="font-display text-[13px] text-mute pt-1">
+              {String(i + 1).padStart(2, '0')}
+            </span>
+            <h3 className="font-display text-[20px] font-semibold tracking-[-0.02em] m-0 text-ink">
+              {step.title}
+            </h3>
+            <p className="font-body text-[18px] leading-[1.5] text-mute m-0 col-span-2 md:col-span-1">
+              {step.desc}
+            </p>
+          </li>
         ))}
-      </div>
+      </ol>
     </div>
   </section>
 );

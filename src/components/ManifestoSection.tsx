@@ -1,28 +1,12 @@
-import RevealOnScroll from './RevealOnScroll';
-
 const ManifestoSection = () => (
-  <section className="relative py-16 md:py-24 px-6 md:px-12 overflow-hidden bg-deep" id="about">
-    <div className="relative z-10 max-w-[1100px] mx-auto grid grid-cols-1 md:grid-cols-[1fr_1.45fr] gap-10 md:gap-20 items-center">
-      <RevealOnScroll>
-        <div className="font-display text-[0.65rem] font-bold tracking-[0.3em] uppercase text-primary mb-5">
-          The idea
-        </div>
-        <h2 className="font-display text-[clamp(1.8rem,3.2vw,2.8rem)] font-extrabold leading-[1.15] tracking-tight">
-          The room
-          <br />
-          <em className="font-normal italic text-primary">is the feed.</em>
-        </h2>
-      </RevealOnScroll>
-      <RevealOnScroll delay={0.15}>
-        <div className="space-y-6">
-          <p className="text-[1.05rem] leading-[1.9] text-muted-custom">
-            Veinue is not a map of the city. It is who shares the air with you — Bluetooth, in the room, right now.
-          </p>
-          <p className="text-[1.05rem] leading-[1.9] text-muted-custom">
-            Friends first. Then the community. Connect without a pickup line. Chat after they accept. Distance stays hidden until you Find a friend.
-          </p>
-        </div>
-      </RevealOnScroll>
+  <section id="room" className="min-h-[100svh] flex flex-col justify-center px-5 py-28 md:px-12 border-t rule scroll-mt-0">
+    <div className="max-w-[980px]">
+      <h2 className="font-display font-semibold tracking-[-0.03em] leading-[1.05] text-[clamp(2.2rem,5vw,4.25rem)] text-ink m-0 mb-10">
+        The room.
+      </h2>
+      <p className="font-body text-[19px] leading-[1.5] text-mute m-0 max-w-[38em]">
+        Not the city. Who shares the air with you, right now. Friends first. Then the rest of Veinue in the same room.
+      </p>
     </div>
   </section>
 );
