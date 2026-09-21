@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap');
+
+:root {
+  --page: #110e0c;
+  --ink: #f6f0e6;
+  --mute: #b7a99a;
+  --hair: #3a322c;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  background: var(--page);
+  color: var(--ink);
+}
+
+body {
+  font-family: Newsreader, Georgia, serif;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+main {
+  min-height: 100svh;
+  padding: 64px 20px 80px;
+  max-width: 720px;
+}
+
+@media (min-width: 768px) {
+  main { padding: 64px 48px 80px; }
+}
+
+a { color: var(--ink); }
+a.back, nav a {
+  font-family: 'Familjen Grotesk', ui-sans-serif, system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--mute);
+  text-decoration: none;
+}
+a.back:hover, nav a:hover { color: var(--ink); }
+
+h1 {
+  font-family: 'Familjen Grotesk', ui-sans-serif, system-ui, sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  margin: 32px 0 40px;
+}
+
+h2 {
+  font-family: 'Familjen Grotesk', ui-sans-serif, system-ui, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 32px 0 8px;
+}
+
+p, ul { color: var(--mute); }
+ul { padding-left: 20px; }
+li { margin: 4px 0; }
+
+nav {
+  margin-top: 64px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}

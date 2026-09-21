@@ -13,6 +13,9 @@ const VeinueFooter = () => (
       <Link to="/impressum" className="text-mute no-underline hover:text-ink">
         Impressum
       </Link>
+      <Link to="/support" className="text-mute no-underline hover:text-ink">
+        Support
+      </Link>
     </nav>
     <p className="font-display text-[14px] m-0 text-mute">Berlin</p>
   </footer>
